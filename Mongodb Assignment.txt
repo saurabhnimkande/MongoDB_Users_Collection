@@ -1,0 +1,336 @@
+Microsoft Windows [Version 10.0.19043.1348]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\saura>mongo
+MongoDB shell version v5.0.4
+connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb
+Implicit session: session { "id" : UUID("fd3f9130-f2c0-4a1c-b912-7650e51b5527") }
+MongoDB server version: 5.0.4
+================
+Warning: the "mongo" shell has been superseded by "mongosh",
+which delivers improved usability and compatibility.The "mongo" shell has been deprecated and will be removed in
+an upcoming release.
+For installation instructions, see
+https://docs.mongodb.com/mongodb-shell/install/
+================
+---
+The server generated these startup warnings when booting:
+        2021-11-22T13:39:45.964+05:30: Access control is not enabled for the database. Read and write access to data and configuration is unrestricted
+---
+---
+        Enable MongoDB's free cloud-based monitoring service, which will then receive and display
+        metrics about your deployment (disk utilization, CPU, operation statistics, etc).
+
+        The monitoring data will be available on a MongoDB website with a unique URL accessible to you
+        and anyone you share the URL with. MongoDB may use this information to make product
+        improvements and to suggest MongoDB products and deployment options to you.
+
+        To enable free monitoring, run the following command: db.enableFreeMonitoring()
+        To permanently disable this reminder, run the following command: db.disableFreeMonitoring()
+---
+> show dbs
+admin   0.000GB
+config  0.000GB
+local   0.000GB
+test    0.000GB
+> use user_collection
+switched to db user_collection
+> db.user_collection.insert({"firstname":"Saurabh","lastname":"Nimkande","email":"saurabhnimkande@gmail.com","gender":"Male","ip_address":"123.31.25.55","age":"21"})
+WriteResult({ "nInserted" : 1 })
+> db.user_collection.find({}).pretty()
+{
+        "_id" : ObjectId("619bb7a97e20c073cb210aae"),
+        "firstname" : "Saurabh",
+        "lastname" : "Nimkande",
+        "email" : "saurabhnimkande@gmail.com",
+        "gender" : "Male",
+        "ip_address" : "123.31.25.55",
+        "age" : "21"
+}
+> db.user_collection.insertMany[{"firstname":"Saurabh","lastname":"Nimkande","email":"saurabhnimkande@gmail.com","gender":"Male","ip_address":"123.31.25.55","age":"21"},{"firstname":"Saurabh","lastname":"Nimkande","email":"saurabhnimkande@gmail.com","gender":"Male","ip_address":"123.31.25.55","age":"21"},{"firstname":"Saurabh","lastname":"Nimkande","email":"saurabhnimkande@gmail.com","gender":"Male","ip_address":"123.31.25.55","age":"21"},{"firstname":"Saurabh","lastname":"Nimkande","email":"saurabhnimkande@gmail.com","gender":"Male","ip_address":"123.31.25.55","age":"21"},{"firstname":"Saurabh","lastname":"Nimkande","email":"saurabhnimkande@gmail.com","gender":"Male","ip_address":"123.31.25.55","age":"21"},{"firstname":"Saurabh","lastname":"Nimkande","email":"saurabhnimkande@gmail.com","gender":"Male","ip_address":"123.31.25.55","age":"21"},{"firstname":"Saurabh","lastname":"Nimkande","email":"saurabhnimkande@gmail.com","gender":"Male","ip_address":"123.31.25.55","age":"21"},{"firstname":"Saurabh","lastname":"Nimkande","email":"saurabhnimkande@gmail.com","gender":"Male","ip_address":"123.31.25.55","age":"21"},{"firstname":"Saurabh","lastname":"Nimkande","email":"saurabhnimkande@gmail.com","gender":"Male","ip_address":"123.31.25.55","age":"21"}]
+> db.user_collection.find({}).pretty()
+{
+        "_id" : ObjectId("619bb7a97e20c073cb210aae"),
+        "firstname" : "Saurabh",
+        "lastname" : "Nimkande",
+        "email" : "saurabhnimkande@gmail.com",
+        "gender" : "Male",
+        "ip_address" : "123.31.25.55",
+        "age" : "21"
+}
+> db.user_collection.insertMany([{"firstname":"selomon","lastname":"khan","email":"beinghuman@gmail.com","gender":"Male","ip_address":"123.31.25.55","age":"45"},{"firstname":"king sulemon","lastname":"laden","email":"saudiismine@gmail.com","gender":"Male","ip_address":"hidden","age":"52"},{"firstname":"babu","lastname":"bhaiiya","email":"billionereindreams@gmail.com","gender":"Male","ip_address":"8798989878","age":"65"},{"firstname":"Doremon","lastname":"Robot","email":"futureseaayahu@gmail.com","gender":"Unknown","ip_address":"no_ip_in_future","age":"Unknown"},{"firstname":"heisenberg","lastname":"betternotask","email":"theonlydrugmafia@gmail.com","gender":"Male","ip_address":"mafiaisundercover","age":"62"},{"firstname":"squid","lastname":"game","email":"winmilliondollers@gmail.com","gender":"org","ip_address":"123.31.25.155","age":"unknown"},{"firstname":"Majnu","lastname":"bhai","email":"worldfamouspainter@gmail.com","gender":"Male","ip_address":"152.544.54.54","age":"35"},{"firstname":"loki","lastname":"sonofzesus","email":"loki@asgurd.com","gender":"Male","ip_address":"123.31.25.55","age":"25"},{"firstname":"bahubali","lastname":"king","email":"mahismatiismine@gmail.com","gender":"Male","ip_address":"123.31.25.55","age":"36"}])
+{
+        "acknowledged" : true,
+        "insertedIds" : [
+                ObjectId("619bbab17e20c073cb210aaf"),
+                ObjectId("619bbab17e20c073cb210ab0"),
+                ObjectId("619bbab17e20c073cb210ab1"),
+                ObjectId("619bbab17e20c073cb210ab2"),
+                ObjectId("619bbab17e20c073cb210ab3"),
+                ObjectId("619bbab17e20c073cb210ab4"),
+                ObjectId("619bbab17e20c073cb210ab5"),
+                ObjectId("619bbab17e20c073cb210ab6"),
+                ObjectId("619bbab17e20c073cb210ab7")
+        ]
+}
+> db.user_collection.find({}).pretty()
+{
+        "_id" : ObjectId("619bb7a97e20c073cb210aae"),
+        "firstname" : "Saurabh",
+        "lastname" : "Nimkande",
+        "email" : "saurabhnimkande@gmail.com",
+        "gender" : "Male",
+        "ip_address" : "123.31.25.55",
+        "age" : "21"
+}
+{
+        "_id" : ObjectId("619bbab17e20c073cb210aaf"),
+        "firstname" : "selomon",
+        "lastname" : "khan",
+        "email" : "beinghuman@gmail.com",
+        "gender" : "Male",
+        "ip_address" : "123.31.25.55",
+        "age" : "45"
+}
+{
+        "_id" : ObjectId("619bbab17e20c073cb210ab0"),
+        "firstname" : "king sulemon",
+        "lastname" : "laden",
+        "email" : "saudiismine@gmail.com",
+        "gender" : "Male",
+        "ip_address" : "hidden",
+        "age" : "52"
+}
+{
+        "_id" : ObjectId("619bbab17e20c073cb210ab1"),
+        "firstname" : "babu",
+        "lastname" : "bhaiiya",
+        "email" : "billionereindreams@gmail.com",
+        "gender" : "Male",
+        "ip_address" : "8798989878",
+        "age" : "65"
+}
+{
+        "_id" : ObjectId("619bbab17e20c073cb210ab2"),
+        "firstname" : "Doremon",
+        "lastname" : "Robot",
+        "email" : "futureseaayahu@gmail.com",
+        "gender" : "Unknown",
+        "ip_address" : "no_ip_in_future",
+        "age" : "Unknown"
+}
+{
+        "_id" : ObjectId("619bbab17e20c073cb210ab3"),
+        "firstname" : "heisenberg",
+        "lastname" : "betternotask",
+        "email" : "theonlydrugmafia@gmail.com",
+        "gender" : "Male",
+        "ip_address" : "mafiaisundercover",
+        "age" : "62"
+}
+{
+        "_id" : ObjectId("619bbab17e20c073cb210ab4"),
+        "firstname" : "squid",
+        "lastname" : "game",
+        "email" : "winmilliondollers@gmail.com",
+        "gender" : "org",
+        "ip_address" : "123.31.25.155",
+        "age" : "unknown"
+}
+{
+        "_id" : ObjectId("619bbab17e20c073cb210ab5"),
+        "firstname" : "Majnu",
+        "lastname" : "bhai",
+        "email" : "worldfamouspainter@gmail.com",
+        "gender" : "Male",
+        "ip_address" : "152.544.54.54",
+        "age" : "35"
+}
+{
+        "_id" : ObjectId("619bbab17e20c073cb210ab6"),
+        "firstname" : "loki",
+        "lastname" : "sonofzesus",
+        "email" : "loki@asgurd.com",
+        "gender" : "Male",
+        "ip_address" : "123.31.25.55",
+        "age" : "25"
+}
+{
+        "_id" : ObjectId("619bbab17e20c073cb210ab7"),
+        "firstname" : "bahubali",
+        "lastname" : "king",
+        "email" : "mahismatiismine@gmail.com",
+        "gender" : "Male",
+        "ip_address" : "123.31.25.55",
+        "age" : "36"
+}
+> db.user_collection.findOne({"_id" : ObjectId("619bbab17e20c073cb210ab7")})
+{
+        "_id" : ObjectId("619bbab17e20c073cb210ab7"),
+        "firstname" : "bahubali",
+        "lastname" : "king",
+        "email" : "mahismatiismine@gmail.com",
+        "gender" : "Male",
+        "ip_address" : "123.31.25.55",
+        "age" : "36"
+}
+> db.user_collection.update({"firstname":"squid"},{$set:{"lastname":"death"})
+...
+... ^C
+
+> db.user_collection.findOne({"_id" : ObjectId("619bbab17e20c073cb210ab7")}})
+uncaught exception: SyntaxError: missing ) after argument list :
+@(shell):1:73
+> db.user_collection.update({"firstname":"squid"},{$set:{"lastname":"death"}})
+WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
+> db.user_collection.findOne({"_id" : ObjectId("619bbab17e20c073cb210ab4")})
+{
+        "_id" : ObjectId("619bbab17e20c073cb210ab4"),
+        "firstname" : "squid",
+        "lastname" : "death",
+        "email" : "winmilliondollers@gmail.com",
+        "gender" : "org",
+        "ip_address" : "123.31.25.155",
+        "age" : "unknown"
+}
+> db.user_collection.updateMany({"gender":"unknown"},{$set:{"gender":"idk"}})
+{ "acknowledged" : true, "matchedCount" : 0, "modifiedCount" : 0 }
+> db.user_collection.updateMany({"gender":"Male"},{$set:{"gender":"idk"}})
+{ "acknowledged" : true, "matchedCount" : 8, "modifiedCount" : 8 }
+> db.user_collection.find({"gender":"idk"}).pretty()
+{
+        "_id" : ObjectId("619bb7a97e20c073cb210aae"),
+        "firstname" : "Saurabh",
+        "lastname" : "Nimkande",
+        "email" : "saurabhnimkande@gmail.com",
+        "gender" : "idk",
+        "ip_address" : "123.31.25.55",
+        "age" : "21"
+}
+{
+        "_id" : ObjectId("619bbab17e20c073cb210aaf"),
+        "firstname" : "selomon",
+        "lastname" : "khan",
+        "email" : "beinghuman@gmail.com",
+        "gender" : "idk",
+        "ip_address" : "123.31.25.55",
+        "age" : "45"
+}
+{
+        "_id" : ObjectId("619bbab17e20c073cb210ab0"),
+        "firstname" : "king sulemon",
+        "lastname" : "laden",
+        "email" : "saudiismine@gmail.com",
+        "gender" : "idk",
+        "ip_address" : "hidden",
+        "age" : "52"
+}
+{
+        "_id" : ObjectId("619bbab17e20c073cb210ab1"),
+        "firstname" : "babu",
+        "lastname" : "bhaiiya",
+        "email" : "billionereindreams@gmail.com",
+        "gender" : "idk",
+        "ip_address" : "8798989878",
+        "age" : "65"
+}
+{
+        "_id" : ObjectId("619bbab17e20c073cb210ab3"),
+        "firstname" : "heisenberg",
+        "lastname" : "betternotask",
+        "email" : "theonlydrugmafia@gmail.com",
+        "gender" : "idk",
+        "ip_address" : "mafiaisundercover",
+        "age" : "62"
+}
+{
+        "_id" : ObjectId("619bbab17e20c073cb210ab5"),
+        "firstname" : "Majnu",
+        "lastname" : "bhai",
+        "email" : "worldfamouspainter@gmail.com",
+        "gender" : "idk",
+        "ip_address" : "152.544.54.54",
+        "age" : "35"
+}
+{
+        "_id" : ObjectId("619bbab17e20c073cb210ab6"),
+        "firstname" : "loki",
+        "lastname" : "sonofzesus",
+        "email" : "loki@asgurd.com",
+        "gender" : "idk",
+        "ip_address" : "123.31.25.55",
+        "age" : "25"
+}
+{
+        "_id" : ObjectId("619bbab17e20c073cb210ab7"),
+        "firstname" : "bahubali",
+        "lastname" : "king",
+        "email" : "mahismatiismine@gmail.com",
+        "gender" : "idk",
+        "ip_address" : "123.31.25.55",
+        "age" : "36"
+}
+> db.user_collection.remove({"firstname":"squid"},1)
+WriteResult({ "nRemoved" : 1 })
+> db.user_collection.deleteOne({"gender":"idk"})
+{ "acknowledged" : true, "deletedCount" : 1 }
+> db.user_collection.deleteMany({"ip_address":"123.31.25.55"})
+{ "acknowledged" : true, "deletedCount" : 3 }
+> db.user_collection.find({}).pretty()
+{
+        "_id" : ObjectId("619bbab17e20c073cb210ab0"),
+        "firstname" : "king sulemon",
+        "lastname" : "laden",
+        "email" : "saudiismine@gmail.com",
+        "gender" : "idk",
+        "ip_address" : "hidden",
+        "age" : "52"
+}
+{
+        "_id" : ObjectId("619bbab17e20c073cb210ab1"),
+        "firstname" : "babu",
+        "lastname" : "bhaiiya",
+        "email" : "billionereindreams@gmail.com",
+        "gender" : "idk",
+        "ip_address" : "8798989878",
+        "age" : "65"
+}
+{
+        "_id" : ObjectId("619bbab17e20c073cb210ab2"),
+        "firstname" : "Doremon",
+        "lastname" : "Robot",
+        "email" : "futureseaayahu@gmail.com",
+        "gender" : "Unknown",
+        "ip_address" : "no_ip_in_future",
+        "age" : "Unknown"
+}
+{
+        "_id" : ObjectId("619bbab17e20c073cb210ab3"),
+        "firstname" : "heisenberg",
+        "lastname" : "betternotask",
+        "email" : "theonlydrugmafia@gmail.com",
+        "gender" : "idk",
+        "ip_address" : "mafiaisundercover",
+        "age" : "62"
+}
+{
+        "_id" : ObjectId("619bbab17e20c073cb210ab5"),
+        "firstname" : "Majnu",
+        "lastname" : "bhai",
+        "email" : "worldfamouspainter@gmail.com",
+        "gender" : "idk",
+        "ip_address" : "152.544.54.54",
+        "age" : "35"
+}
+> db.dropDatabase()
+{ "ok" : 1 }
+> show dbs
+admin   0.000GB
+config  0.000GB
+local   0.000GB
+test    0.000GB
+>
+
+
+
+
